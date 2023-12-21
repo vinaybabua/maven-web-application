@@ -30,4 +30,12 @@ public class EmployeeService {
 
 		return js.toString();
 }
+	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	@ResponseBody
+	String getHello(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
+			throws JSONException {
+
+				return "Hello manasa";
+
+			}
 }
