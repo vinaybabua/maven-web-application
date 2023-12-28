@@ -34,7 +34,7 @@ public class EmployeeService {
 	@ResponseBody
 	String getHello(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
 			throws JSONException {
-
+                        System.out.println("Helooooooooooooooooooooooooooooooooo") ;
 				return "Hello manasa";
 
 			}
