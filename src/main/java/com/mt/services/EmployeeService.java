@@ -45,7 +45,7 @@ public class EmployeeService {
   
 @RequestMapping(value = "/greet", method = RequestMethod.GET)
 @ResponseBody
-    String getHello(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
+    String getHello(HttpServletRequest request, HttpServletResponse response)
 			throws JSONException {
         String prefix = System.getenv().getOrDefault("GREETING_PREFIX", "Hi");
         
