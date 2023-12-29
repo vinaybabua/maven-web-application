@@ -18,15 +18,18 @@ public class EmployeeService {
 
  @Value("${greeter.message}")
  private String greeterMessageFormat;
+
+@Value("${MYNAME}")
+String name;
 	
 	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
 	@ResponseBody
 	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
 			throws JSONException {
- 
+                
 		JSONObject js = new JSONObject();
 		js.put("Name", "Manasa Technologies");
-		js.put("Calling Name", "Manasa");
+		js.put("Calling Name", name);
 		js.put("DOB", "01-Nov-2011");
 		js.put("Hobbies", "Reading Technical Books");
 		js.put("Places he like", "His native place");
@@ -38,7 +41,7 @@ public class EmployeeService {
 	String getHello(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
 			throws JSONException {
                         System.out.println("Helooooooooooooooooooooooooooooooooo") ;
-				return "Hello manasa";
+				return "Hello manasa "+name;
 
 			}
 	
