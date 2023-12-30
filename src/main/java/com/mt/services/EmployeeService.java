@@ -19,6 +19,15 @@ public class EmployeeService {
  @Value("${greeter.message}")
  private String greeterMessageFormat;
 
+ @Value("${SQL_DB_URL}")
+ private String dbURL;
+
+ @Value("${SQL_DB_USERNAME}")
+ private String dbUsername;
+
+ @Value("${SQL_DB_PWD}")
+ private String dbpwd;
+
 @Value("${MYNAME}")
 String name;
 	
@@ -56,6 +65,9 @@ String name;
             prefix = "Hello!";
         }
 
+	System.out.println("DB URL: "+ dbURL) ;
+	System.out.println("DB USERNAME: "+ dbUsername) ;
+	System.out.println("DB PWD: "+ dbPwd) ;
         return String.format(greeterMessageFormat, prefix);
     }
 }
