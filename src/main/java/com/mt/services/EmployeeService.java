@@ -26,7 +26,7 @@ public class EmployeeService {
  private String dbUsername;
 
  @Value("${SQL_DB_PWD}")
- private String dbpwd;
+ private String dbPwd;
 
 @Value("${MYNAME}")
 String name;
